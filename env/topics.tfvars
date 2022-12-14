@@ -6,7 +6,7 @@ topics = [
    name       = "opa_testing"
    partitions = 3
    config = { 
-     "delete.retention.ms"                     = "81400000" 
+     "delete.retention.ms"                     = "86400000" 
    }
   },
    {
