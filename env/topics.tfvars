@@ -1,14 +1,7 @@
  
 rbac_enabled = false  
 
-topics = [
-  {
-   name       = "opa_testing"
-   partitions = 3
-   config = { 
-     "delete.retention.ms"                     = "86400000" 
-   }
-  },
+topics = [ 
    {
    name       = "sentinel_testing"
    partitions = 4
