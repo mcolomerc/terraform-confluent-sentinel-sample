@@ -5,10 +5,8 @@ topics = [
   {
    name       = "opa_testing"
    partitions = 3
-   config = {
-     "cleanup.policy"                          = "delete"
-     "compression.type"                        = "producer"
-     "delete.retention.ms"                     = "86400000" 
+   config = { 
+     "delete.retention.ms"                     = "81400000" 
    }
   },
    {
