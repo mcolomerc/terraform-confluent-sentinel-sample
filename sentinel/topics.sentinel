@@ -1,0 +1,18 @@
+import "tfplan/v2" as tfplan
+
+max_partitions = 5
+
+confluent_topics = filter tfplan.resource_changes as _, rc {
+    rc.type is "confluent_kafka_topic" and
+    (rc.change.actions contains "create" or rc.change.actions is ["update"])
+}
+
+partitions_count = rule {
+    all confluent_topics as _, topics {
+        topics.change.after.partitions_count is not none and topics.change.after.partitions_count < 5
+    }
+}
+
+main = rule {
+   partitions_count
+}
