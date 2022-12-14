@@ -9,7 +9,7 @@ confluent_topics = filter tfplan.resource_changes as _, rc {
 
 partitions_count = rule {
     all confluent_topics as _, topics {
-        topics.change.after.partitions_count is not none and topics.change.after.partitions_count < 5
+        topics.change.after.partitions_count is not null and topics.change.after.partitions_count < 5
     }
 }
 
