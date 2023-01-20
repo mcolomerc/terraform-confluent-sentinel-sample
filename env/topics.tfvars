@@ -9,4 +9,4 @@ topics = [
      "delete.retention.ms"                     = "86100000" 
    }
   } 
-]# end topics
+]
