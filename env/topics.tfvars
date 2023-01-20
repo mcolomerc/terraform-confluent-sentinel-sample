@@ -8,5 +8,12 @@ topics = [
    config = { 
      "delete.retention.ms"                     = "86100000" 
    }
-  } 
+  },
+  {
+   name = "webinar_topic"
+   partitions = 2
+   config = {
+    "delete.retention.ms" = "10000000"
+   }
+  }
 ]
