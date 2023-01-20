@@ -6,7 +6,6 @@ terraform {
        version = "1.21.0"
     }
   }
-  experiments = [module_variable_optional_attrs]
 } 
 
  provider "confluent" {
