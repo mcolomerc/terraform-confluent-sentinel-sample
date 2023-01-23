@@ -15,5 +15,10 @@ topics = [
    config = {
     "delete.retention.ms" = "10000000"
    }
-  }
+  },
+ {
+  name = "test_topic"
+  partitions = 3
+  config = {}
+ }
 ]
